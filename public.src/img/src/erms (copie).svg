@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.2" baseProfile="tiny" width="210mm" height="297mm" viewBox="0 0 21000 29700" preserveAspectRatio="xMidYMid" fill-rule="evenodd" clip-path="url(#presentation_clip_path)" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+ <defs>
+  <font id="EmbeddedFont_1" horiz-adv-x="2048">
+   <font-face font-family="Century Schoolbook L embedded" units-per-em="2048" font-weight="normal" font-style="normal" ascent="2037" descent="635"/>
+   <missing-glyph horiz-adv-x="2048" d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"/>
+   <glyph unicode="☰" horiz-adv-x="1509"/>
+   <glyph unicode="S" horiz-adv-x="1139" d="M 1118,1490 L 1042,1490 961,1368 C 864,1460 733,1509 588,1509 319,1509 139,1337 139,1081 139,858 250,747 551,669 L 745,620 C 897,581 911,577 954,544 1016,497 1049,430 1049,350 1049,268 1018,200 956,145 889,86 821,63 709,63 557,63 449,110 352,217 266,313 223,409 193,567 L 104,567 113,-17 193,-17 285,123 C 422,10 537,-31 715,-31 1016,-31 1208,145 1208,420 1208,547 1165,655 1085,733 1030,786 950,821 786,862 L 567,917 C 385,964 299,1044 299,1169 299,1312 416,1411 590,1411 733,1411 850,1349 932,1232 991,1149 1028,1062 1055,958 L 1143,958 1118,1490 Z"/>
+   <glyph unicode="R" horiz-adv-x="1403" d="M 504,717 L 623,717 C 702,717 784,692 829,655 889,608 920,534 934,399 L 944,295 C 969,63 1044,-31 1206,-31 1374,-31 1454,82 1460,327 L 1374,327 C 1366,186 1341,125 1286,125 1239,125 1219,159 1184,301 L 1151,430 C 1106,618 1026,704 866,745 1161,786 1303,905 1303,1112 1303,1345 1106,1478 762,1478 L 53,1478 53,1382 90,1382 C 256,1382 274,1372 274,1286 L 274,1227 274,250 274,192 C 274,106 256,96 90,96 L 53,96 53,0 725,0 725,96 688,96 C 522,96 504,106 504,192 L 504,250 504,717 Z M 504,813 L 504,1264 C 504,1345 506,1352 526,1368 543,1380 557,1382 645,1382 L 756,1382 C 958,1382 1051,1296 1051,1110 1051,1005 1024,926 971,883 920,840 827,813 729,813 L 504,813 Z"/>
+   <glyph unicode="M" horiz-adv-x="1854" d="M 588,1478 L 59,1478 59,1382 98,1382 C 264,1382 283,1372 283,1285 L 283,1226 283,439 C 283,160 242,100 45,100 L 45,0 629,0 629,100 C 434,100 393,160 393,439 L 393,1347 881,0 963,0 1419,1347 1419,252 1419,192 C 1419,104 1401,96 1235,96 L 1198,96 1198,0 1870,0 1870,96 1833,96 C 1667,96 1649,104 1649,192 L 1649,252 1649,1226 1649,1286 C 1649,1372 1667,1382 1833,1382 L 1870,1382 1870,1478 1356,1478 981,387 588,1478 Z"/>
+  </font>
+ </defs>
+ 
+ <defs class="TextEmbeddedBitmaps"/>
+ <g class="SlideGroup">
+  <g>
+   <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+    <g class="Page">
+     <g class="com.sun.star.drawing.TextShape">
+      <g id="id3">
+       <text class="TextShape"><tspan class="TextParagraph" font-family="Century Schoolbook L, serif" font-size="3387px" font-weight="400"><tspan class="TextPosition" x="4750" y="9824"><tspan fill="rgb(255,0,0)" stroke="none">☰</tspan><tspan fill="rgb(0,0,0)" stroke="none">RMS</tspan></tspan></tspan></text>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
