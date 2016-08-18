@@ -1,0 +1,9 @@
+{
+  "name": "ERMS",
+  "description" : "ERMS project",
+  "version": "0.0.0",
+  "dependencies": {
+      "express": "4.14.x",
+      "body-parser": "1.15.2"
+  }
+}
