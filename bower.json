@@ -7,6 +7,7 @@
   "directory": "public.src/bower_components",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "backbone": "^1.3.3"
+    "backbone": "^1.3.3",
+    "cookieconsent2": "^1.0.10"
   }
 }
