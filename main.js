@@ -1,6 +1,7 @@
 var express = require('express')
   , http = require('http')
   , bodyParser = require('body-parser')
+  , nStore = require('nstore')
   , app = express()
   , http_port = 3000;
 
