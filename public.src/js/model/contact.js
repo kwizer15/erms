@@ -1,8 +1,8 @@
 var Contact = Backbone.Model.extend({
 	urlRoot: "/signs",
-	
-	constructor: function(name, phone) {
-		this.name = name;
-		this.phone = phone;
-	}
+});
+
+var Contacts = Backbone.Collection.extend({
+	urlRoot: '/sign',
+	model: Contact
 });
