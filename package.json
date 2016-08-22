@@ -1,12 +1,14 @@
 {
   "name": "ERMS",
-  "description" : "ERMS project",
+  "description": "ERMS project",
   "version": "0.0.0",
   "dependencies": {
-      "express": "4.14.x",
-      "body-parser": "1.15.2"
+    "body-parser": "1.15.2",
+    "express": "4.14.x",
+    "socket.io": "^1.4.8",
+    "socket.io-client": "^1.4.8"
   },
   "devDependencies": {
-      "nstore": "0.5.2"
+    "nstore": "0.5.2"
   }
 }

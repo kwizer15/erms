@@ -1,4 +1,6 @@
 
+const socket = require('socket.io');
+
 const resultsToArray = function(results) {
   var outs = [];
   for (var key in results) {
@@ -31,6 +33,7 @@ const front = function(server, modelSigns) {
           res.json(err);
         } else {
           model.id = key;
+          socket.broadcast('newSign', model);
           res.json(model);
         }
       });
