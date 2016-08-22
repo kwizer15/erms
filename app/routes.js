@@ -9,7 +9,7 @@ const resultsToArray = function(results) {
   return outs;
 }
 
-const back = function(server, modelSigns) {
+const front = function(server, modelSigns) {
     // GET /signs
     server.get('/signs', function(req, res) {
       console.log("GET (ALL) : /signs");
@@ -17,9 +17,6 @@ const back = function(server, modelSigns) {
         res.json((err) ? err : resultsToArray(result));
       });
     });
-  }
-
-const front = function(server, modelSigns) {
     // POST /signs
     server.post('/signs', function(req, res) {
       console.log("POST CREATE ", req.body);
@@ -43,4 +40,3 @@ const front = function(server, modelSigns) {
 
 
 exports.front = front;
-exports.back = back;
