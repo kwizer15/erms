@@ -1,62 +1,29 @@
-var express = require('express')
-  , http = require('http')
-  , bodyParser = require('body-parser')
-  , nStore = require('nstore')
-  , app = express()
-  , http_port = 3000;
+const express = require('express');
+const bodyParser = require('body-parser');
+const front = express();
+const backend = express();
+const front_port = 3000;
+const backend_port = 7777;
+const Routes = require('./app/routes');
 
-nStore = nStore.extend(require('nstore/query')());
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(__dirname + '/public.src'));
-
-var modelSigns;
-
-modelSigns = nStore.new("signs.db", function() {
-	run(http_port);
-});
-
-var run = function(port) {
-	defineRoutes();
-	app.listen(port);
-	console.log("Listening on " + port);
+const initServer = function(server, path) {
+  server.use(bodyParser.json());
+  server.use(bodyParser.urlencoded({extended:true}));
+  server.use(express.static(__dirname + '/' + path + '.src'));
 }
 
-var defineRoutes = function() {
-	app.get('/signs', function(req, res) {
-		console.log("GET (ALL) : /signs");
-		modelSigns.all(function(err, result) {
-			res.json((err) ? err : resultsToArray(result));
-		});
-	});
-	
-	app.post('/signs', function(req, res) {
-		console.log("POST CREATE ", req.body);
+initServer(front, 'public');
+initServer(backend, 'private');
 
-	    var d = new Date(),
-	    model = req.body;
-	    model.saveDate = (d.valueOf());
+const nStore = require('nstore').extend(require('nstore/query')());
+var modelSigns = nStore.new("signs.db", function() {
+  Routes.front(front, modelSigns);
+  run(front, front_port);
+  Routes.back(backend, modelSigns);
+  run(backend, backend_port);
+});
 
-	    modelSigns.save(null, model, function(err, key) {
-	      if (err) {
-	        console.log("Erreur : ", err);
-	        res.json(err);
-	      } else {
-	        model.id = key;
-	        res.json(model);
-	      }
-	    });
-	});
-};
-
-var resultsToArray = function(results) {
-	var outs = [];
-	for (var key in results) {
-		var out = results[key];
-		out.id = key;
-		outs.push(out);
-	}
-	
-	return outs;
+const run = function(server, port) {
+	server.listen(port);
+	console.log("Listening on " + port);
 }

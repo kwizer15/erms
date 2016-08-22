@@ -1,0 +1,22 @@
+Page d'accueil backend
+
+Créer 3 serveurs séparés
+  frontend
+    [socket.io] Emettre un event côté serveur lors d'une soumission de formulaire
+    Créer un page norme en singlepage
+  backend
+    Modèle static
+      Faire une requète sur l'API (/signs)
+      Afficher les entrées dans une liste ou un tableau
+    Permettre d'ajouter des rapports d'appel
+      Créer un bouton "Rapport d'appel"
+      Créer un formulaire à remplir
+      Faire une requète de sauvegarde
+      Gérer le PUT côté serveur pour MaJ de l'entrée
+    Permettre d'éliminer une entrée
+      Créer un bouton Echec
+      Pas de suppression, envoyer un PUT avec un paramètre "échec { date:* , user:*}"
+    [socket.io] Ecouter l'event de soummission de formulaire
+      Rajouter une ligne au tableau/à la liste en cas de soumission côté frontend
+  api
+    Sécuriser l'api (token? à détailler)
