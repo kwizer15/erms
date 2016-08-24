@@ -1,7 +1,5 @@
 
-const socket = require('socket.io');
-
-const resultsToArray = function(results) {
+var resultsToArray = function(results) {
   var outs = [];
   for (var key in results) {
     var out = results[key];
@@ -11,7 +9,7 @@ const resultsToArray = function(results) {
   return outs;
 }
 
-const front = function(server, modelSigns) {
+var back = function(server, modelSigns) {
     // GET /signs
     server.get('/signs', function(req, res) {
       console.log("GET (ALL) : /signs");
@@ -19,6 +17,9 @@ const front = function(server, modelSigns) {
         res.json((err) ? err : resultsToArray(result));
       });
     });
+  }
+
+var front = function(server, modelSigns) {
     // POST /signs
     server.post('/signs', function(req, res) {
       console.log("POST CREATE ", req.body);
@@ -33,7 +34,6 @@ const front = function(server, modelSigns) {
           res.json(err);
         } else {
           model.id = key;
-          socket.broadcast('newSign', model);
           res.json(model);
         }
       });
@@ -43,3 +43,4 @@ const front = function(server, modelSigns) {
 
 
 exports.front = front;
+exports.back = back;
