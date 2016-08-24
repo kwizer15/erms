@@ -2,3 +2,4 @@ public.src/bower_components/
 /node_modules/
 /signs.db
 .project
+**/*.log
