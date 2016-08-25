@@ -21,6 +21,10 @@ const signs = require('./routes/signs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public.src'));
+app.use(function(req, res, next) {
+  req.io = io;
+  next();
+});
 app.use('/signs', signs);
 // defineRoutes(app);
 httpServer.listen(config.http.port, function() {

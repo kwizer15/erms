@@ -9,7 +9,7 @@ const Sign = require('../models/Sign');
 router.post('/', (req, res, next) => {
   Sign.create(req.body, (err, sign) => {
     if (err) return next(err);
-    // io.emit('newSign', sign);
+    req.io.emit('newSign', sign);
     res.json(sign);
   })
 });
