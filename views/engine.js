@@ -1,8 +1,6 @@
 'use strict';
 
 const consolidate = require('consolidate');
-const mustache = require('mustache');
-
-consolidate.requires.mustache = mustache.configure();
+const handlebars = require('handlebars');
 
 module.exports = consolidate;
