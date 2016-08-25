@@ -1,12 +1,13 @@
+'use strict';
+
 var getDatas = function(next) {
   $.ajax({
     url: '/signs',
     type: 'get',
     dataType: 'json',
     success: next,
-    error: function(data) {
-      console.error(data);
-      getDatas();
+    error: function(err) {
+      getDatas(next);
     }
   });
 }

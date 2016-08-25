@@ -1,3 +1,5 @@
+'use strict';
+
 var datas;
 
 var listen = function($el) {
@@ -15,7 +17,7 @@ var listen = function($el) {
 	});
 }
 
-var submit = function(datas, options) {	
+var submit = function(datas, options) {
 	$.ajax({
 		url:'/signs',
 		type: 'post',
@@ -41,5 +43,5 @@ var modalError = function(data) {
 
 $(function() {
 	listen($('#signup form'));
-	
+
 });
