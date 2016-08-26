@@ -15,15 +15,9 @@
     Sécuriser l'api
       Créer un model User
       Introduire passport
-      Créer une page de login
-      Créer routes d'identification
+      Sécuriser le transfert pour l'identification
       Sécuriser les routes de l'api
       Mettre en place un csrf pour éviter les robots (inscription, login)
     Mettre un mot de passe sur MongoDB
     Intégrer le mot de passe à l'app (config)
-  static
-    Mettre en place un moteur de template (Jade, Handlebar, Mustache?)
-    Convertir les pages index et admin en template
-    Créer les routes vers ces accès
-    Supprimer le express.static
 Mettre en place une doc d'utilisation côté admin
