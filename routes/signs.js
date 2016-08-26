@@ -1,8 +1,6 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
-const io = require('socket.io');
 const Sign = require('../models/Sign');
 
 // Public

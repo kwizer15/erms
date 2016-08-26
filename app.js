@@ -7,31 +7,28 @@ const app = express();
 const httpServer = require('http').createServer(app);
 const io = require('socket.io').listen(httpServer);
 const bodyParser = require('body-parser');
-// const consolidate = require('./views/engine');
+const exphbs = require('express-handlebars');
+const public_routes = require('./routes/public');
+const admin_routes = require('./routes/admin');
 const signs = require('./routes/signs');
-
-var isAuthenticated = (req, res, next) => {
-  return next();
-}
-
-var hasRight = (req, res, next) => {
-  return next();
-}
-
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public.src'));
-// app.engine('html', consolidate.swig);
-// app.set('view engine', 'mustache');
-// app.set('views', __dirname + '/views');
 
+
+app.engine('.hbs', exphbs({defaultLayout: 'public', extname: '.hbs'}));
+app.set('view engine', '.hbs');
+app.set('views', __dirname + '/views');
+
+// Middelware pour acces à Socket.io depuis le router
 app.use((req, res, next) => {
   req.io = io;
   next();
 });
-app.use('/signs', isAuthenticated, hasRight, signs);
-// defineRoutes(app);
+app.use('/', public_routes);
+app.use('/admin', admin_routes);
+app.use('/signs', signs);
 httpServer.listen(config.http.port, () => {
   console.log("Listening on " + config.http.port);
 });

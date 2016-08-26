@@ -1,4 +1,4 @@
-'use strict';
+'use strict';ice 
 
 var Contact = Backbone.Model.extend({
 	urlRoot: "/signs",
