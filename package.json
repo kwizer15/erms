@@ -6,8 +6,12 @@
   "dependencies": {
     "body-parser": "1.15.2",
     "express": "4.14.x",
+<<<<<<< HEAD
     "express-handlebars": "^3.0.0",
     "jsonwebtoken": "^7.1.9",
+=======
+    "handlebars": "^4.0.5",
+>>>>>>> 666d1a536e2ca9d60df3782e42b3fcffc7e4d376
     "mongoose": "^4.5.10",
     "socket.io": "^1.4.8"
   }
