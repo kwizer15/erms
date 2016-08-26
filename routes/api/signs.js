@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const Sign = require('../models/Sign');
+const Sign = require('../../models/Sign');
 
 // Public
 router.post('/', (req, res, next) => {

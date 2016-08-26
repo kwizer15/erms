@@ -6,5 +6,8 @@ module.exports = {
   },
   http: {
     port: 3000
+  },
+  token: {
+    secret: 'theyWillNoControoooooooolUuuuuus'
   }
 };

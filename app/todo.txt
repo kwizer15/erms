@@ -13,10 +13,9 @@
       Rajouter une ligne au tableau/à la liste en cas de soumission côté frontend
   api
     Sécuriser l'api
-      Créer un model User
       Introduire passport
       Sécuriser le transfert pour l'identification
-      Sécuriser les routes de l'api
+      Reprendre le token côté client et l'injecter dans les requêtes.
       Mettre en place un csrf pour éviter les robots (inscription, login)
     Mettre un mot de passe sur MongoDB
     Intégrer le mot de passe à l'app (config)

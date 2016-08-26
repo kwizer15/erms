@@ -7,12 +7,13 @@ $(function() {
   $el.on('submit', function(e) {
     e.preventDefault();
     $.ajax({
-      url: '/login',
+      url: '/auth/login',
       type: 'post',
       dataType: 'json',
       data: {
         login: $el.find('[name=login]').first().val(),
         password: $el.find('[name=password]').first().val()
+        // @todo security!
       }
     });
 
